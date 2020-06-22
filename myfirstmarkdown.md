@@ -6,34 +6,25 @@ output:
   html_document: 
     keep_md: yes
 ---
-
-
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
+This is my work.
 
 ```r
-summary(cars)
+groups <- c("Apple_1", "Apple_2", 
+            "Pepper_1", "Pepper_2", 
+            "Maize_1", "Maize_2",
+            "Tomato")
+reviewers <- sample(groups, 7)
+d <- data.frame(groups = groups, reviewers = reviewers)
+d
 ```
 
 ```
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
+##     groups reviewers
+## 1  Apple_1   Maize_1
+## 2  Apple_2    Tomato
+## 3 Pepper_1  Pepper_1
+## 4 Pepper_2  Pepper_2
+## 5  Maize_1   Apple_1
+## 6  Maize_2   Maize_2
+## 7   Tomato   Apple_2
 ```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-![](myfirstmarkdown_files/figure-html/pressure-1.png)<!-- -->
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
